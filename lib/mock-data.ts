@@ -168,7 +168,7 @@ export const styles: Style[] = [
   {
     id: "mrn-006",
     name: "4x1 Merino Top",
-    image: "/assets/6.jpg",
+    image: "/assets/6.JPG",
     code: "MRN-006",
     category: "Knitwear",
     season: "Spring/Summer 2025",
