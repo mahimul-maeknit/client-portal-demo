@@ -93,33 +93,42 @@ export default function StylesPage() {
 
         {/* Styles Grid */}
         <div className="grid grid-cols-4 gap-6 mb-8">
-          {filteredStyles.map((style) => (
-            <Link key={style.id} href={`/styles/${style.id}`}>
-              <Card className="hover:shadow-md transition-shadow cursor-pointer">
-                <div className="w-full h-48 bg-neutral-300 flex items-center justify-center">
-                  <span className="text-white text-sm">Style Image</span>
-                </div>
-                <CardContent className="p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-neutral-900 font-medium">{style.name}</h3>
-                    <span className="text-xs text-neutral-500">
-                      {style.code.split("-")[0]}-{style.code.split("-")[1]}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="px-2 py-1 bg-neutral-900 text-white text-xs rounded-full">Request Production</span>
-                    <span className="text-sm text-neutral-500">ETA: {style.eta}</span>
-                  </div>
-                  <Progress value={style.progress} className="h-2 mb-3" />
-                  <div className="flex justify-between text-xs text-neutral-500">
-                    <span>{style.colorways} Colorways</span>
-                    <span>{style.sizes} Sizes</span>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
+  {filteredStyles.map((style) => (
+    <Link key={style.id} href={`/styles/${style.id}`}>
+      <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <div className="w-full aspect-square overflow-hidden rounded-t-md bg-neutral-100 flex items-center justify-center">
+          <img
+            src={style.image || "/placeholder.png"}
+            alt={style.name}
+            className="max-w-full max-h-full object-contain"
+          />
         </div>
+        <CardContent className="p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-neutral-900 font-medium">{style.name}</h3>
+            <span className="text-xs text-neutral-500">
+              {style.code.split("-")[0]}-{style.code.split("-")[1]}
+            </span>
+          </div>
+          <div className="flex items-center justify-between mb-3">
+            <span className="px-2 py-1 bg-neutral-900 text-white text-xs rounded-full">
+              Request Production
+            </span>
+            <span className="text-sm text-neutral-500">ETA: {style.eta}</span>
+          </div>
+          <Progress value={style.progress} className="h-2 mb-3" />
+          <div className="flex justify-between text-xs text-neutral-500">
+            <span>{style.colorways} Colorways</span>
+            <span>{style.sizes} Sizes</span>
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
+  ))}
+</div>
+
+
+
 
         {/* Pagination */}
         <div className="flex items-center justify-between">

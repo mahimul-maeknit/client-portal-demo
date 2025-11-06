@@ -71,9 +71,10 @@ export const factories: Factory[] = [
 
 export const styles: Style[] = [
   {
-    id: "vc-001",
-    name: "Vintage Crewneck",
-    code: "VC-2025-001",
+    id: "mss-001",
+    name: "Mohair Striped Sweater",
+    image: "/assets/5.png",
+    code: "MSS-2025-001",
     category: "Knitwear",
     season: "Fall/Winter 2025",
     targetMarket: "Premium Casual",
@@ -91,6 +92,7 @@ export const styles: Style[] = [
   {
     id: "cd-002",
     name: "Cardigan",
+    image: "/assets/4.png",
     code: "CDG-002",
     category: "Knitwear",
     season: "Fall/Winter 2025",
@@ -109,6 +111,7 @@ export const styles: Style[] = [
   {
     id: "av-003",
     name: "Argyle Vest",
+    image: "/assets/2.png",
     code: "AVT-003",
     category: "Knitwear",
     season: "Fall/Winter 2025",
@@ -129,6 +132,7 @@ export const styles: Style[] = [
     name: "Scarf",
     code: "SCF-004",
     category: "Accessories",
+    image: "/assets/7.webp",
     season: "Fall/Winter 2025",
     targetMarket: "Premium",
     composition: "100% Cashmere",
@@ -146,6 +150,7 @@ export const styles: Style[] = [
     id: "pl-005",
     name: "Polo",
     code: "PLO-005",
+    image: "/assets/3.png",
     category: "Knitwear",
     season: "Spring/Summer 2025",
     targetMarket: "Casual",
@@ -163,6 +168,7 @@ export const styles: Style[] = [
   {
     id: "mrn-006",
     name: "4x1 Merino Top",
+    image: "/assets/6.jpg",
     code: "MRN-006",
     category: "Knitwear",
     season: "Spring/Summer 2025",
@@ -181,6 +187,7 @@ export const styles: Style[] = [
   {
     id: "bne-007",
     name: "Beanie",
+    image: "/assets/1.png",
     code: "BNE-007",
     category: "Accessories",
     season: "Fall/Winter 2025",
@@ -198,8 +205,9 @@ export const styles: Style[] = [
   },
   {
     id: "tnk-008",
-    name: "Turtleneck",
-    code: "TNK-008",
+    name: "Mohair Cropped Cardigan",
+    code: "MCC-008",
+    image: "/assets/8.png",
     category: "Knitwear",
     season: "Fall/Winter 2025",
     targetMarket: "Premium",
@@ -263,6 +271,7 @@ export const orders: Order[] = [
     styleName: "Argyle Vest",
     factoryId: "factory-c",
     factoryName: "Factory C",
+    image_url: "/assets/1.png", 
     totalUnits: 250,
     totalValue: 5250,
     status: "On the Way!",

@@ -206,23 +206,18 @@ export default function StyleDetailPage({ params }: { params: Promise<{ id: stri
             <div className="col-span-4">
               {/* Style Image */}
               <Card className="mb-6">
-                <CardContent className="p-6">
-                  <div className="w-full h-64 bg-neutral-300 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-white text-sm">{style.name} Image</span>
-                  </div>
-                  <div className="grid grid-cols-3 gap-2">
-                    <div className="w-full h-16 bg-neutral-200 rounded flex items-center justify-center">
-                      <span className="text-neutral-600 text-xs">Front</span>
-                    </div>
-                    <div className="w-full h-16 bg-neutral-200 rounded flex items-center justify-center">
-                      <span className="text-neutral-600 text-xs">Back</span>
-                    </div>
-                    <div className="w-full h-16 bg-neutral-200 rounded flex items-center justify-center">
-                      <span className="text-neutral-600 text-xs">Detail</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <CardContent className="p-6">
+                {/* Main Style Image */}
+                <div className="w-full h-128 overflow-hidden rounded-lg mb-4 bg-neutral-200">
+                  <img
+                    src={style.image || "/assets/1.png"}  // fallback if missing
+                    alt={style.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+              </CardContent>
+            </Card>
 
               {/* Available Colorways */}
               <Card className="mb-6">

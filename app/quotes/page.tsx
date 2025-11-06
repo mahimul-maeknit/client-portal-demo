@@ -124,13 +124,7 @@ export default function QuotesPage() {
               </div>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
-                  <label className="text-sm text-neutral-600">Quantity:</label>
-                  <Input
-                    type="number"
-                    value={quantity}
-                    onChange={(e) => setQuantity(Number.parseInt(e.target.value))}
-                    className="w-20"
-                  />
+                  
                 </div>
                 <Button onClick={handleUpdateQuotes} className="bg-neutral-900 text-white hover:bg-neutral-800">
                   <RefreshCw className="w-4 h-4 mr-2" />
