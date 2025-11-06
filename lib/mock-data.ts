@@ -271,7 +271,6 @@ export const orders: Order[] = [
     styleName: "Argyle Vest",
     factoryId: "factory-c",
     factoryName: "Factory C",
-    image_url: "/assets/1.png", 
     totalUnits: 250,
     totalValue: 5250,
     status: "On the Way!",
